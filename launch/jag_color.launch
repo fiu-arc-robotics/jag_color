@@ -1,0 +1,27 @@
+<!--
+Launch file with params for jag_color node
+-->
+
+<launch>
+  <node name="jag_color" pkg="jag_color" type="jag_color" output="screen" >
+
+    <!-- MAIN PARAMS -->
+    <param name="pc2_topic_in"         type="string"  value="/cloud" />
+    <param name="pc2_topic_out"        type="string"  value="/cloud_color" />
+    <param name="img_topic_in"         type="string"  value="/usb_cam/image_rect_color" />
+    <param name="camera_info_topic"    type="string"  value="/usb_cam/camera_info" />
+
+    <param name="img_frame"            type="string"  value="usb_cam" />
+    <param name="pc2_frame"            type="string"  value="laser" />
+    <param name="odom_frame"           type="string"  value="odom" />
+
+    <!-- OTHER PARAMS -->
+    <param name="img_shift_x"          type="int"     value="0" />
+    <param name="img_shift_y"          type="int"     value="0" />
+    <param name="queue_size"           type="int"     value="10" />
+
+    <param name="is_voxel"             type="bool"    value="true" />
+    <param name="voxel_size"           type="double"  value="0.01" />
+
+  </node>
+</launch>
